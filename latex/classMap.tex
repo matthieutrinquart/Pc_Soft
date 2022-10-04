@@ -1,0 +1,118 @@
+\hypertarget{classMap}{}\doxysection{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+
+
+la classe \mbox{\hyperlink{classMap}{Map}} permet d\textquotesingle{}enregistrer tous les mots qui apparaissent dans les fichiers texte de l\textquotesingle{}arborescence.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMap_a0f5ad0fd4563497b4214038cbca8b582}\label{classMap_a0f5ad0fd4563497b4214038cbca8b582}} 
+\mbox{\hyperlink{classMap_a0f5ad0fd4563497b4214038cbca8b582}{Map}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur vide de la classe \mbox{\hyperlink{classMap}{Map}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_aca13fd805e15c1d3598488b352eaff8a}{add}} (\mbox{\hyperlink{classMot}{Mot}} $\ast$mot)
+\begin{DoxyCompactList}\small\item\em La fonction add permet de rajouter un \mbox{\hyperlink{classMot}{Mot}} dans le tableau dynamique. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMot}{Mot}} $\ast$ \mbox{\hyperlink{classMap_ab4c0fc4be9c79b4c8b32fe94144e7e4c}{Recherche}} (string $\ast$mot)
+\begin{DoxyCompactList}\small\item\em La fonction Recherche permet de retrouver un \mbox{\hyperlink{classMot}{Mot}} dans le tableau mots en fonction d\textquotesingle{}une chaine de caractères. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMot}{Mot}} $\ast$ \mbox{\hyperlink{classMap_a862db6172686852b6b14cd3297ddcac9}{get\+Mots}} ()
+\begin{DoxyCompactList}\small\item\em Getter du tableau mots. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMap_a49c7970f023335baa030d984e022fe0e}{get\+Nb\+Mots}} ()
+\begin{DoxyCompactList}\small\item\em Getter le nombre de \mbox{\hyperlink{classMot}{Mot}} stocké. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMap_a4106a693419ab603bd8485f9df02ef68}{comparator\+String}} (string mot1, string mot2)
+\begin{DoxyCompactList}\small\item\em comparator\+String permet de comparer deux String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+la classe \mbox{\hyperlink{classMap}{Map}} permet d\textquotesingle{}enregistrer tous les mots qui apparaissent dans les fichiers texte de l\textquotesingle{}arborescence. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMap_aca13fd805e15c1d3598488b352eaff8a}\label{classMap_aca13fd805e15c1d3598488b352eaff8a}} 
+\index{Map@{Map}!add@{add}}
+\index{add@{add}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Map\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMot}{Mot}} $\ast$}]{mot }\end{DoxyParamCaption})}
+
+
+
+La fonction add permet de rajouter un \mbox{\hyperlink{classMot}{Mot}} dans le tableau dynamique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot} & Prend en paramètre le mot à rajouter dans le tableau. La fonction add insert un mot en respectant l\textquotesingle{}ordre de trier du tableau en utilisant le principe de la dichotomie pour trouver l\textquotesingle{}emplacement où insérer le mot. Si le mot existe déjà la fonction insère juste le path dans le \mbox{\hyperlink{classMot}{Mot}} sinon comme pour la fonction add de la classe \mbox{\hyperlink{classMot}{Mot}} la fonction crée une copie du tableau puis réinstancie le tableau avec une case en plus. Ensuite la fonction copie l\textquotesingle{}ancien tableau dans le nouveau tableau en rajoutant le \mbox{\hyperlink{classMot}{Mot}} à rajouter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_a4106a693419ab603bd8485f9df02ef68}\label{classMap_a4106a693419ab603bd8485f9df02ef68}} 
+\index{Map@{Map}!comparatorString@{comparatorString}}
+\index{comparatorString@{comparatorString}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{comparatorString()}{comparatorString()}}
+{\footnotesize\ttfamily int Map\+::comparator\+String (\begin{DoxyParamCaption}\item[{string}]{mot1,  }\item[{string}]{mot2 }\end{DoxyParamCaption})}
+
+
+
+comparator\+String permet de comparer deux String. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot1} & première chaine de caractères à comparer. \\
+\hline
+{\em mot2} & deuxième chaine de caractères à comparer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un entier 0 si mot1 $<$ mot2, 1 si mot1 $>$ mot2 et 2 si mot1 == mot2 La fonction compare des string en fonction de la position dans le tableau ASCII de chaque caractère en prenant comme priorité la position du caractère dans le string.(la fonction va comparer le premier caractère des string s\textquotesingle{}ils sont les mêmes elle va ensuite comparer le second caractère etc...). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMap_a862db6172686852b6b14cd3297ddcac9}\label{classMap_a862db6172686852b6b14cd3297ddcac9}} 
+\index{Map@{Map}!getMots@{getMots}}
+\index{getMots@{getMots}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{getMots()}{getMots()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMot}{Mot}} $\ast$ Map\+::get\+Mots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du tableau mots. 
+
+\begin{DoxyReturn}{Returns}
+Retourne un pointeur sur un tableau de \mbox{\hyperlink{classMot}{Mot}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMap_a49c7970f023335baa030d984e022fe0e}\label{classMap_a49c7970f023335baa030d984e022fe0e}} 
+\index{Map@{Map}!getNbMots@{getNbMots}}
+\index{getNbMots@{getNbMots}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{getNbMots()}{getNbMots()}}
+{\footnotesize\ttfamily int Map\+::get\+Nb\+Mots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter le nombre de \mbox{\hyperlink{classMot}{Mot}} stocké. 
+
+\begin{DoxyReturn}{Returns}
+Retourne un entier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMap_ab4c0fc4be9c79b4c8b32fe94144e7e4c}\label{classMap_ab4c0fc4be9c79b4c8b32fe94144e7e4c}} 
+\index{Map@{Map}!Recherche@{Recherche}}
+\index{Recherche@{Recherche}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Recherche()}{Recherche()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMot}{Mot}} $\ast$ Map\+::\+Recherche (\begin{DoxyParamCaption}\item[{string $\ast$}]{mot }\end{DoxyParamCaption})}
+
+
+
+La fonction Recherche permet de retrouver un \mbox{\hyperlink{classMot}{Mot}} dans le tableau mots en fonction d\textquotesingle{}une chaine de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot} & Prend en paramètre une chaine de caractères à rechercher dans le tableau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un pointeur sur un \mbox{\hyperlink{classMot}{Mot}} qui correspond à la chaine de caractères passée en paramètre. le tableau mots étant trié je fais une recherche dichotomique pour retrouver le mot dans le tableau. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Map.\+h\item 
+Map.\+cpp\end{DoxyCompactItemize}

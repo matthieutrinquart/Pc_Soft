@@ -1,0 +1,61 @@
+\hypertarget{classIndexation}{}\doxysection{Indexation Class Reference}
+\label{classIndexation}\index{Indexation@{Indexation}}
+
+
+Classe \mbox{\hyperlink{classIndexation}{Indexation}} permet d\textquotesingle{}instancier la classe \mbox{\hyperlink{classMap}{Map}} en parcourant l\textquotesingle{}arborescence d\textquotesingle{}un dossier et récupère tous les mots des fichiers textes.  
+
+
+
+
+{\ttfamily \#include $<$Indexation.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIndexation_af301d79ed6ffa00ee19d6e194e85401a}\label{classIndexation_af301d79ed6ffa00ee19d6e194e85401a}} 
+\mbox{\hyperlink{classIndexation_af301d79ed6ffa00ee19d6e194e85401a}{Indexation}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur vide de la classe \mbox{\hyperlink{classIndexation}{Indexation}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIndexation_aa8c24e97b6989febee7ddb7505113a92}{load}} (string $\ast$path)
+\begin{DoxyCompactList}\small\item\em La fonction load fait un parcours du dossier passé en paramètre et remplit l\textquotesingle{}attribut map de tous les mots trouvés dans les fichiers textes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMap}{Map}} $\ast$ \mbox{\hyperlink{classIndexation_ada6d5a385ac2185080f0736c9e1e09b6}{get\+Map}} () const
+\begin{DoxyCompactList}\small\item\em La fonction get\+Map est un getter qui retourne la \mbox{\hyperlink{classMap}{Map}} de la classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{classIndexation}{Indexation}} permet d\textquotesingle{}instancier la classe \mbox{\hyperlink{classMap}{Map}} en parcourant l\textquotesingle{}arborescence d\textquotesingle{}un dossier et récupère tous les mots des fichiers textes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndexation_ada6d5a385ac2185080f0736c9e1e09b6}\label{classIndexation_ada6d5a385ac2185080f0736c9e1e09b6}} 
+\index{Indexation@{Indexation}!getMap@{getMap}}
+\index{getMap@{getMap}!Indexation@{Indexation}}
+\doxysubsubsection{\texorpdfstring{getMap()}{getMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMap}{Map}} $\ast$ Indexation\+::get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+La fonction get\+Map est un getter qui retourne la \mbox{\hyperlink{classMap}{Map}} de la classe. 
+
+\begin{DoxyReturn}{Returns}
+Retourne un pointeur sur l\textquotesingle{}attribut \mbox{\hyperlink{classMap}{Map}} de la classe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndexation_aa8c24e97b6989febee7ddb7505113a92}\label{classIndexation_aa8c24e97b6989febee7ddb7505113a92}} 
+\index{Indexation@{Indexation}!load@{load}}
+\index{load@{load}!Indexation@{Indexation}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Indexation\+::load (\begin{DoxyParamCaption}\item[{string $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+La fonction load fait un parcours du dossier passé en paramètre et remplit l\textquotesingle{}attribut map de tous les mots trouvés dans les fichiers textes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Prend en paramètre une chaine de caractères qui représente le lien du dossier à parcourir. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Indexation.\+h\item 
+Indexation.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,94 @@
+\hypertarget{classMot}{}\doxysection{Mot Class Reference}
+\label{classMot}\index{Mot@{Mot}}
+
+
+La classe \mbox{\hyperlink{classMot}{Mot}} permet de stocker tous les liens des fichiers textes où apparait le mot .  
+
+
+
+
+{\ttfamily \#include $<$Mot.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMot_a290ef467ee8a767050d133c167c089be}\label{classMot_a290ef467ee8a767050d133c167c089be}} 
+\mbox{\hyperlink{classMot_a290ef467ee8a767050d133c167c089be}{Mot}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur vide de la classe \mbox{\hyperlink{classMot}{Mot}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMot_a599fbb106568d39e8dd383248ecb8646}\label{classMot_a599fbb106568d39e8dd383248ecb8646}} 
+\mbox{\hyperlink{classMot_a599fbb106568d39e8dd383248ecb8646}{Mot}} (string $\ast$mot)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{classMot}{Mot}} avec comme paramètre le mot à stocker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMot_a10a4673b8bea7d2eb6a6cd30a38a09e7}{add}} (string $\ast$path)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}un nouveau lien dans le tableau path. \end{DoxyCompactList}\item 
+string $\ast$ \mbox{\hyperlink{classMot_afe48142095eaa37458a9e1316740f60f}{get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Getter du tableau de lien des fichiers textes. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMot_a83a45c1326bba4722801439f5ce1f725}{get\+Mot}} ()
+\begin{DoxyCompactList}\small\item\em Getter du mot stocker. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMot_aeddb141ffcd5f1dc0eb6655c2f4339a8}{get\+Nb\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Getter du nombre de lien stocker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \mbox{\hyperlink{classMot}{Mot}} permet de stocker tous les liens des fichiers textes où apparait le mot . 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMot_a10a4673b8bea7d2eb6a6cd30a38a09e7}\label{classMot_a10a4673b8bea7d2eb6a6cd30a38a09e7}} 
+\index{Mot@{Mot}!add@{add}}
+\index{add@{add}!Mot@{Mot}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Mot\+::add (\begin{DoxyParamCaption}\item[{string $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}un nouveau lien dans le tableau path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Prend en paramètre une adresse d\textquotesingle{}une chaine de caractères qui symbolise le lien du fichier texte où appparait le mot. Cet fonction ajoute un nouveau lien d\textquotesingle{}un fichier où apparait le mot de l\textquotesingle{}attribut \char`\"{}mot\char`\"{}. Le tableau path étant dynamique la fonction fait une copie du tableau et réinstancie le tableau avec une case supplémentaire pour ensuite remplir le nouveau tableau avec la copie de l\textquotesingle{}ancien tableau + le nouveau lien. Cette méthode est couteuse en temps de calcul car la fonction doit à chaque nouveau lien recopier le tableau. Mais elle est bien optimisée en mémoire car le tableau fait la taille du nombre de liens stockés pour ce mot. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMot_a83a45c1326bba4722801439f5ce1f725}\label{classMot_a83a45c1326bba4722801439f5ce1f725}} 
+\index{Mot@{Mot}!getMot@{getMot}}
+\index{getMot@{getMot}!Mot@{Mot}}
+\doxysubsubsection{\texorpdfstring{getMot()}{getMot()}}
+{\footnotesize\ttfamily string Mot\+::get\+Mot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du mot stocker. 
+
+\begin{DoxyReturn}{Returns}
+retourne un string contenant le mot stocker. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMot_aeddb141ffcd5f1dc0eb6655c2f4339a8}\label{classMot_aeddb141ffcd5f1dc0eb6655c2f4339a8}} 
+\index{Mot@{Mot}!getNbPath@{getNbPath}}
+\index{getNbPath@{getNbPath}!Mot@{Mot}}
+\doxysubsubsection{\texorpdfstring{getNbPath()}{getNbPath()}}
+{\footnotesize\ttfamily int Mot\+::get\+Nb\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du nombre de lien stocker. 
+
+\begin{DoxyReturn}{Returns}
+retourne un int contant le nombre de lien stocker. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMot_afe48142095eaa37458a9e1316740f60f}\label{classMot_afe48142095eaa37458a9e1316740f60f}} 
+\index{Mot@{Mot}!getPath@{getPath}}
+\index{getPath@{getPath}!Mot@{Mot}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily string $\ast$ Mot\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du tableau de lien des fichiers textes. 
+
+\begin{DoxyReturn}{Returns}
+un pointeur sur une chaine de caractères. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mot.\+h\item 
+Mot.\+cpp\end{DoxyCompactItemize}
